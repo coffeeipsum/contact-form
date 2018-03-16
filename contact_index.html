@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Contact Form</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <ul>
+                    <li class="logo"><a target="_blank" href="#"><img src="../pics/logo_lip.jpg"  alt="my very own logo"></a></li>
+                    <li><a target="_blank" href="https://coffeeipsum.github.io/Stream1/index.html">Home</a></li>
+                    <li> <!-- Btn Test -->
+                        <div class="dropdown">
+                            <div id="dropdownBtn" class="dropbtn">Contact Test 
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="dropdown-content" id="myDropdown">
+                                <a href="https://www.linkedin.com/in/amjohnston1/" target="_blank">LinkedIN</a>
+                                <a href="https://www.facebook.com/coffeeipsum/" target="_blank">Facebook</a>
+                                <a href="https://www.instagram.com/coffeeipsum/" target="_blank">Instagram</a> 
+                            </div>                
+                        </div>  
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Form section -->
+        <div class="section">
+            <h1>Get in touch!</h1>
+            <form>
+                <input id="name" name="name" placeholder="Name *" required="" type="text" />
+                <input id="email" name="email" autofocus placeholder="Email *" required="" type="email" />
+                <textarea name="message" placeholder="Hello there  :) "></textarea>
+                <input type="submit" value="SEND" class="submit" />
+            
+            <!-- PLACE HOLDER: <form action="url" method="POST">    -->
+            </form>
+        </div>
+        <!-- /Form section -->
+    <footer>
+        <div class="insta">
+            <a class="fab fa-instagram" href="https://www.instagram.com/coffeeipsum/" target="_blank"></a>
+        </div>
+        <div class="linked">
+            <a class="fab fa-linkedin" href="https://www.linkedin.com/in/amjohnston1/" target="_blank"></a>
+        </div>
+        <div class="facebook">
+            <a class="fab fa-facebook-square" href="https://www.facebook.com/coffeeipsum/" target="_blank"></a>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        document.getElementById('dropdownBtn').onclick = function(e) {
+            console.log('dropdown click');
+            document.getElementById("myDropdown").classList.toggle("show");
+        };
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+      </script>
+</body>    
+</html>
